@@ -1,0 +1,370 @@
+
+/* ==============================
+   HERO SECTION
+================================= */
+
+.hero {
+  min-height: calc(100vh - 76px);
+  display: flex;
+  align-items: center;
+  padding: 80px 24px;
+  overflow: hidden;
+
+  background: var(--bg-primary);
+  transition: background-color 0.25s ease;
+}
+
+.hero-container {
+  width: 100%;
+  max-width: 1250px;
+  margin: 0 auto;
+
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) 360px;
+  align-items: center;
+  column-gap: 70px;
+}
+
+/* ==============================
+   HERO CONTENT
+================================= */
+
+.hero-content {
+  max-width: 650px;
+  animation: fadeInUp 0.7s ease both;
+}
+
+.hero-greeting {
+  margin-bottom: 15px;
+
+  color: var(--text-secondary);
+  font-size: 17px;
+  font-weight: 500;
+}
+
+.hero-name {
+  margin-bottom: 25px;
+
+  color: var(--text-primary);
+  font-size: clamp(38px, 5vw, 58px);
+  font-weight: 800;
+  line-height: 1.25;
+  letter-spacing: -1.5px;
+}
+
+.hero-name span {
+  color: var(--primary);
+}
+
+.hero-role {
+  margin-bottom: 25px;
+
+  color: var(--primary);
+  font-size: clamp(21px, 2.5vw, 29px);
+  font-weight: 700;
+  line-height: 1.5;
+}
+
+.hero-description {
+  max-width: 570px;
+  margin-bottom: 35px;
+
+  color: var(--text-secondary);
+  font-size: 15px;
+  line-height: 2;
+}
+
+/* ==============================
+   BUTTONS
+================================= */
+
+.hero-buttons {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 15px;
+}
+
+.hero-primary-button,
+.hero-secondary-button {
+  min-height: 50px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+
+  padding: 0 22px;
+  border-radius: 10px;
+
+  font-size: 14px;
+  font-weight: 600;
+  text-decoration: none;
+
+  transition:
+    background-color 0.2s ease,
+    color 0.2s ease,
+    border-color 0.2s ease,
+    transform 0.2s ease;
+}
+
+.hero-primary-button {
+  color: #ffffff;
+  background: var(--primary);
+  border: 1px solid var(--primary);
+}
+
+.hero-primary-button:hover {
+  background: var(--primary-hover);
+  border-color: var(--primary-hover);
+  transform: translateY(-3px);
+}
+
+.hero-secondary-button {
+  color: var(--text-primary);
+  background: transparent;
+  border: 1px solid var(--border-color);
+}
+
+.hero-secondary-button:hover {
+  color: var(--primary);
+  background: var(--bg-card);
+  border-color: var(--primary);
+  transform: translateY(-3px);
+}
+
+/* ==============================
+   HERO VISUAL
+================================= */
+
+.hero-visual {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  width: 100%;
+  min-height: 420px;
+
+  animation: fadeIn 0.9s ease both;
+}
+
+.hero-glow {
+  position: absolute;
+  width: 330px;
+  height: 330px;
+
+  background: var(--primary);
+  opacity: 0.10;
+  filter: blur(100px);
+  border-radius: 50%;
+}
+
+.hero-image-card {
+  position: relative;
+  z-index: 1;
+
+  width: 300px;
+  min-height: 365px;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 25px;
+
+  padding: 35px;
+
+  background: var(--bg-card);
+  border: 1px solid var(--border-color);
+  border-radius: 24px;
+
+  box-shadow: 0 25px 65px var(--shadow-color);
+
+  transition:
+    background-color 0.25s ease,
+    border-color 0.25s ease,
+    box-shadow 0.25s ease,
+    transform 0.3s ease;
+}
+
+.hero-image-card:hover {
+  transform: translateY(-6px);
+}
+
+/* ==============================
+   AVATAR
+================================= */
+
+.hero-avatar {
+  width: 210px;
+  height: 210px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  overflow: hidden;
+  border-radius: 50%;
+
+  background: var(--bg-secondary);
+  border: 4px solid var(--primary);
+
+  box-shadow: 0 12px 35px var(--shadow-color);
+}
+
+.hero-profile-image {
+  width: 100%;
+  height: 100%;
+
+  object-fit: cover;
+  object-position: center 25%;
+
+  border-radius: 50%;
+};
+
+.hero-image-caption {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+  text-align: center;
+}
+
+.hero-image-name {
+  color: var(--text-primary);
+  font-size: 16px;
+  font-weight: 700;
+}
+
+.hero-image-role {
+  color: var(--text-secondary);
+  font-size: 13px;
+}
+
+/* ==============================
+   RTL
+================================= */
+
+.hero-rtl {
+  direction: rtl;
+}
+
+.hero-rtl .hero-content {
+  text-align: right;
+}
+
+.hero-rtl .hero-description {
+  margin-left: auto;
+  margin-right: 0;
+}
+
+.hero-rtl .hero-buttons {
+  justify-content: flex-start;
+}
+
+.hero-rtl .hero-primary-button svg {
+  transform: scaleX(-1);
+}
+
+/* ==============================
+   RESPONSIVE
+================================= */
+
+@media (max-width: 900px) {
+  .hero-container {
+    grid-template-columns: 1fr 0.8fr;
+    gap: 35px;
+  }
+
+  .hero-image-card {
+    width: 260px;
+    min-height: 330px;
+  }
+
+  .hero-avatar {
+    width: 155px;
+    height: 155px;
+    font-size: 50px;
+  }
+}
+
+@media (max-width: 700px) {
+  .hero {
+    min-height: auto;
+    padding: 75px 20px;
+  }
+
+  .hero-container {
+    grid-template-columns: 1fr;
+    gap: 55px;
+  }
+
+  .hero-content {
+    max-width: 100%;
+  }
+
+  .hero-name {
+    font-size: clamp(34px, 8vw, 46px);
+  }
+
+  .hero-role {
+    font-size: 22px;
+  }
+
+  .hero-description {
+    font-size: 14px;
+  }
+
+  .hero-visual {
+    min-height: 340px;
+  }
+
+  .hero-image-card {
+    width: 270px;
+    min-height: 320px;
+  }
+
+  .hero-avatar {
+    width: 150px;
+    height: 150px;
+  }
+}
+
+@media (max-width: 420px) {
+  .hero-buttons {
+    align-items: stretch;
+  }
+
+  .hero-primary-button,
+  .hero-secondary-button {
+    padding: 0 15px;
+    font-size: 13px;
+  }
+
+  .hero-image-card {
+    width: 100%;
+    max-width: 280px;
+  }
+}
+
+.hero-visual {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  min-height: 420px;
+  animation: fadeIn 0.9s ease both;
+
+  transform: translateX(-15px);
+}
+@media (max-width: 900px) {
+  .hero-container {
+    grid-template-columns: 1.2fr 0.8fr;
+    gap: 20px;
+  }
+
+  .hero-visual {
+    transform: none;
+  }
+}

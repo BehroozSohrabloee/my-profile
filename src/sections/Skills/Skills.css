@@ -1,0 +1,149 @@
+.skills-section {
+  padding: 110px 24px;
+  background: #0f1014;
+}
+
+.skills-container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* Header */
+
+.skills-header {
+  max-width: 700px;
+  margin-bottom: 55px;
+}
+
+.skills-subtitle {
+  color: #a99fff;
+  font-size: 13px;
+  font-weight: 700;
+}
+
+.skills-title {
+  color: #ffffff;
+  font-size: clamp(28px, 4vw, 40px);
+  line-height: 1.6;
+  margin-top: 18px;
+}
+
+.skills-description {
+  color: #a4a5b0;
+  font-size: 14px;
+  line-height: 2;
+  margin-top: 15px;
+}
+
+/* Grid */
+
+.skills-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 22px;
+}
+
+/* Cards */
+
+.skill-card {
+  padding: 28px;
+
+  background: #17181f;
+  border: 1px solid #292a35;
+  border-radius: 16px;
+
+  min-height: 230px;
+
+  transition: all 0.3s ease;
+}
+
+.skill-card:hover {
+  transform: translateY(-6px);
+  border-color: #8b7cff;
+  background: #1c1d27;
+}
+
+.skill-card-header {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.skill-icon {
+  width: 48px;
+  height: 48px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  background: rgba(139, 124, 255, 0.12);
+  color: #a99fff;
+
+  border-radius: 12px;
+}
+
+.skill-card-header h3 {
+  color: #ffffff;
+  font-size: 16px;
+  font-weight: 700;
+}
+
+.skill-card-description {
+  color: #9394a1;
+  font-size: 13px;
+  line-height: 1.9;
+
+  margin-top: 22px;
+  min-height: 48px;
+}
+
+/* Skill Tags */
+
+.skill-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 9px;
+
+  margin-top: 20px;
+}
+
+.skill-tag {
+  background: #252631;
+  color: #c4c4d0;
+
+  padding: 7px 11px;
+  border-radius: 7px;
+
+  font-size: 11px;
+  font-weight: 500;
+}
+
+/* RTL */
+
+.skills-rtl {
+  direction: rtl;
+  text-align: right;
+}
+
+/* Responsive */
+
+@media (max-width: 1000px) {
+  .skills-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 600px) {
+  .skills-section {
+    padding: 75px 20px;
+  }
+
+  .skills-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .skill-card {
+    padding: 24px;
+  }
+}
